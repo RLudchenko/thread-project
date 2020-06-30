@@ -9,7 +9,8 @@ public class ImplementsRunnable implements Runnable {
 
     @Override
     public void run() {
-        while (count != 100) {
+        int fin = 100;
+        while (count != fin) {
             count++;
             LOGGER.info("ImplementsRunnable: " + count + "\n");
         }

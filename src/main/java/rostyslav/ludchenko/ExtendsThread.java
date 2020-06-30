@@ -9,7 +9,8 @@ public class ExtendsThread extends Thread {
 
     @Override
     public void run() {
-        while (count != 100) {
+        int fin = 100;
+        while (count != fin) {
             count++;
             LOGGER.info("ExtendsThread: " + count + "\n");
         }
