@@ -14,7 +14,6 @@ public class ExtendsThread extends Thread {
     @Override
     public void run() {
         while (!counter.isFinished()) {
-            //test
             counter.count();
             LOGGER.info("ExtendsThread: " + counter.getCounter() + "\n");
         }
