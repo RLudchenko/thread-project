@@ -4,8 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class ImplementsRunnable implements Runnable {
-    Counter counter;
     private static final Logger LOGGER = LogManager.getLogger(ImplementsRunnable.class);
+    Counter counter;
 
     public ImplementsRunnable(Counter counter) {
         this.counter = counter;
