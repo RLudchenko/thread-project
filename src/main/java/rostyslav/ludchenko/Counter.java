@@ -2,7 +2,7 @@ package rostyslav.ludchenko;
 
 public class Counter {
     private static int counter = 0;
-    private final int fin = 100;
+    private final int limit = 100;
 
     public int getCounter() {
         return counter;
@@ -13,6 +13,6 @@ public class Counter {
     }
 
     public boolean isFinished() {
-        return counter == fin;
+        return counter == limit;
     }
 }

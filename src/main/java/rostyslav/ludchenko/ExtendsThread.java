@@ -5,13 +5,16 @@ import org.apache.logging.log4j.Logger;
 
 public class ExtendsThread extends Thread {
     private static final Logger LOGGER = LogManager.getLogger(ExtendsThread.class);
-    Counter counter = new Counter();
+    private final Counter counter;
+
+    public ExtendsThread(Counter counter) {
+        this.counter = counter;
+    }
 
     @Override
     public void run() {
         while (!counter.isFinished()) {
             counter.count();
-
             LOGGER.info("ExtendsThread: " + counter.getCounter() + "\n");
         }
     }
