@@ -1,7 +1,7 @@
 package rostyslav.ludchenko;
 
 public class Counter {
-    private int counter = 0;
+    private static int counter = 0;
     private final int fin = 100;
 
     public int getCounter() {
