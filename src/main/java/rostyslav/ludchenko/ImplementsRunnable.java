@@ -5,14 +5,14 @@ import org.apache.logging.log4j.Logger;
 
 public class ImplementsRunnable implements Runnable {
     private static final Logger LOGGER = LogManager.getLogger(ImplementsRunnable.class);
-    private int count = 0;
+    Counter counter = new Counter();
 
     @Override
     public void run() {
-        int fin = 100;
-        while (count != fin) {
-            count++;
-            LOGGER.info("ImplementsRunnable: " + count + "\n");
+        while (!counter.isFinished()) {
+            counter.count();
+
+            LOGGER.info("ImplementsRunnable: " + counter.getCounter() + "\n");
         }
     }
 }
